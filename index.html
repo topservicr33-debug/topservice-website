@@ -1,197 +1,1134 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Top Service | مكافحة الآفات والتطهير</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Top Service | مكافحة الآفات والتطهير</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* أيقونات التواصل أعلى الصفحة */
+    .top-contact-icons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .top-contact-icons a {
+      text-decoration: none;
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    /* روابط أرقام التواصل */
+    .contact-box a {
+      color: inherit;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .contact-box a:hover {
+      text-decoration: underline;
+    }
+
+    /* زر واتساب العائم */
+    .whatsapp-float {
+      position: fixed;
+      right: 18px;
+      bottom: 20px;
+      height: 58px;
+      padding: 0 16px 0 10px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      background: #25D366;
+      color: #fff;
+      border-radius: 35px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      box-shadow: 0 7px 25px rgba(0, 0, 0, .28);
+      z-index: 9999;
+      direction: rtl;
+      transition: .25s;
+    }
+
+    .whatsapp-float svg {
+      width: 31px;
+      height: 31px;
+      fill: #fff;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-3px) scale(1.03);
+    }
+
+    .whatsapp-float:active {
+      transform: scale(.96);
+    }
+
+    .whatsapp-float::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 35px;
+      border: 2px solid #25D366;
+      animation: waPulse 2.8s infinite;
+      pointer-events: none;
+    }
+
+    @keyframes waPulse {
+      0% {
+        transform: scale(1);
+        opacity: .6;
+      }
+
+      70% {
+        transform: scale(1.18);
+        opacity: 0;
+      }
+
+      100% {
+        transform: scale(1.18);
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .whatsapp-float {
+        right: 14px;
+        bottom: 16px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<div>💬 واتساب: <a href="https://wa.me/201069577759" target="_blank">01069577759</a> &nbsp; | &nbsp; 📞 اتصل بنا: <a href="tel:+201094498984">01094498984</a></div>>
+  <!-- الشريط العلوي -->
+  <div class="topbar">
+    <div class="container">
 
-<nav>
-  <div class="container navwrap">
-    <div class="brand">
-      <img class="logo-img" src="topservice-logo.png" alt="Top Service Logo">
-      <div><b>TOP SERVICE</b><small>مكافحة آفات الصحة العامة والتطهير</small></div>
-    </div>
-    <div class="menu">
-      <a href="#home">الرئيسية</a>
-      <a href="#services">خدماتنا</a>
-      <a href="#contracts">العقود</a>
-      <a href="#why">لماذا نحن</a>
-      <a href="#contact">تواصل معنا</a>
-    </div>
-    <a class="navcta" href="#contact">اطلب معاينة</a>
-  </div>
-</nav>
-
-<header class="hero" id="home">
-  <div class="container hero-grid">
-    <div>
-      <span class="badge">✓ خدمة منظمة • متابعة • حلول مخصصة</span>
-      <h1>حلول احترافية لمكافحة <span>الآفات والتطهير</span></h1>
-      <p>
-        نحمي المنازل والشركات والمنشآت بخطط مكافحة مدروسة، متابعة منتظمة،
-        ومعالجات مخصصة حسب نوع الإصابة وطبيعة المكان.
-      </p>
-      <div class="actions">
-        <a class="btn primary" href="#contact">📅 اطلب زيارة الآن</a>
-        <a class="btn gold" href="#contact">💬 تواصل واتساب</a>
-        <a class="btn ghost" href="#services">استعرض الخدمات</a>
-      </div>
-    </div>
-
-    <div class="visual">
-      <div class="gridpattern"></div>
-      <div class="technician">🧑‍🔧</div>
-      <div class="visual-copy">
-        <h3>بيئة أكثر أمانًا</h3>
-        <p>نظام خدمة واضح يبدأ بالمعاينة، ثم المعالجة، ثم المتابعة لضمان أفضل نتيجة ممكنة.</p>
-        <div class="stats">
-          <div class="stat"><b>01</b><span>معاينة</span></div>
-          <div class="stat"><b>02</b><span>معالجة</span></div>
-          <div class="stat"><b>03</b><span>متابعة</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<section id="services">
-  <div class="container">
-    <div class="section-head">
-      <small>OUR SERVICES</small>
-      <h2>خدماتنا</h2>
-      <p>خدمات مكافحة متكاملة للمنازل، المطاعم، الشركات، العيادات، المصانع والمنشآت المختلفة.</p>
-    </div>
-    <div class="services">
-      <div class="card"><div class="service-icon">🪳</div><h3>مكافحة الصراصير</h3><p>خطط معالجة مخصصة للصراصير الألماني والأمريكي مع التركيز على أماكن الاختباء ومصادر الإصابة.</p><div class="more">اعرف المزيد ←</div></div>
-      <div class="card"><div class="service-icon">🛏️</div><h3>مكافحة بق الفراش</h3><p>برنامج دقيق للغرف والمفروشات ومناطق الانتشار مع متابعة بعد التنفيذ عند الحاجة.</p><div class="more">اعرف المزيد ←</div></div>
-      <div class="card"><div class="service-icon">🐜</div><h3>مكافحة النمل</h3><p>تحديد مسارات ومصادر الأعشاش ثم تنفيذ المعالجة بالطريقة الأنسب لطبيعة المكان.</p><div class="more">اعرف المزيد ←</div></div>
-      <div class="card"><div class="service-icon">🐀</div><h3>مكافحة القوارض</h3><p>مراقبة ومكافحة الفئران والجرذان مع تحديد نقاط الدخول ووضع خطة وقاية مستمرة.</p><div class="more">اعرف المزيد ←</div></div>
-      <div class="card"><div class="service-icon">🦟</div><h3>الذباب والبعوض</h3><p>حلول للمناطق الداخلية والخارجية تشمل المعالجة وتقليل عوامل الجذب والتكاثر.</p><div class="more">اعرف المزيد ←</div></div>
-      <div class="card"><div class="service-icon">🧼</div><h3>التطهير والتعقيم</h3><p>خدمة منظمة للمواقع التي تحتاج إلى مستوى إضافي من النظافة والتعقيم وفق طبيعة الاستخدام.</p><div class="more">اعرف المزيد ←</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="why" id="why">
-  <div class="container">
-    <div class="section-head">
-      <small>WHY TOP SERVICE</small>
-      <h2>لماذا تختار توب سيرفيس؟</h2>
-      <p>لأن الخدمة الجيدة ليست زيارة واحدة فقط، بل نظام متكامل من المعاينة وحتى المتابعة.</p>
-    </div>
-    <div class="points">
-      <div class="point"><div class="i">👨‍🔧</div><b>فنيون مدربون</b><span>تنفيذ احترافي وخطوات واضحة داخل الموقع.</span></div>
-      <div class="point"><div class="i">🧪</div><b>حلول مناسبة</b><span>اختيار طريقة المعالجة حسب نوع الآفة وطبيعة المنشأة.</span></div>
-      <div class="point"><div class="i">📋</div><b>تقارير ومتابعة</b><span>تنظيم الزيارات ومتابعة النتائج للمواقع التعاقدية.</span></div>
-      <div class="point"><div class="i">⚡</div><b>استجابة سريعة</b><span>تواصل مباشر وتنسيق الزيارة بأقرب موعد متاح.</span></div>
-    </div>
-  </div>
-</section>
-
-<section id="contracts">
-  <div class="container">
-    <div class="contracts">
-      <div class="contract-banner">
-        <span class="badge" style="background:#ffffff15;color:#fff;border-color:#ffffff25">B2B SOLUTIONS</span>
-        <h3>عقود شهرية وسنوية للشركات والمنشآت</h3>
-        <p>
-          برامج دورية مصممة حسب طبيعة الموقع، مستوى الخطورة، ونظام التشغيل.
-          مناسبة للمطاعم، الشركات، المصانع، العيادات، المدارس والمجمعات السكنية.
-        </p>
-        <div class="actions"><a class="btn gold" href="#contact">اطلب عرض سعر للشركات</a></div>
-      </div>
-      <div class="sectors">
-        <div class="sector"><span>🍽️</span>مطاعم وكافيهات</div>
-        <div class="sector"><span>🏢</span>شركات ومكاتب</div>
-        <div class="sector"><span>🏭</span>مصانع ومخازن</div>
-        <div class="sector"><span>🏥</span>عيادات ومراكز</div>
-        <div class="sector"><span>🏫</span>مدارس وحضانات</div>
-        <div class="sector"><span>🏘️</span>كمبوندات ومنشآت</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="section-head">
-      <small>HOW IT WORKS</small>
-      <h2>كيف نعمل؟</h2>
-      <p>ثلاث خطوات واضحة من أول التواصل وحتى المتابعة بعد التنفيذ.</p>
-    </div>
-    <div class="steps">
-      <div class="card step"><div class="num">1</div><h3>معاينة وتقييم</h3><p>تحديد نوع الآفة، درجة الإصابة، أماكن النشاط والعوامل المساعدة على انتشارها.</p></div>
-      <div class="card step"><div class="num">2</div><h3>تنفيذ المعالجة</h3><p>اختيار أسلوب التنفيذ المناسب للمكان مع تقليل التعطيل قدر الإمكان.</p></div>
-      <div class="card step"><div class="num">3</div><h3>المتابعة</h3><p>قياس النتيجة وإعادة التقييم عند الحاجة خاصة في العقود والمواقع الحساسة.</p></div>
-    </div>
-  </div>
-</section>
-
-<section style="background:#eef4f1">
-  <div class="container">
-    <div class="section-head">
-      <small>TESTIMONIALS</small>
-      <h2>آراء العملاء</h2>
-      <p>مكان مخصص لاحقًا لإضافة تقييمات العملاء الحقيقية من جوجل أو واتساب.</p>
-    </div>
-    <div class="testimonials">
-      <div class="card"><div class="quote">“</div><p>خدمة منظمة والتزام في المواعيد، والمتابعة بعد التنفيذ كانت ممتازة.</p><div class="stars">★★★★★</div><div class="person">عميل شركة</div><div class="role">تقييم تجريبي</div></div>
-      <div class="card"><div class="quote">“</div><p>التعامل واضح من المعاينة وحتى تنفيذ البرنامج داخل الموقع.</p><div class="stars">★★★★★</div><div class="person">عميل منشأة</div><div class="role">تقييم تجريبي</div></div>
-      <div class="card"><div class="quote">“</div><p>فريق محترف والخدمة مناسبة جدًا للمواقع التي تحتاج متابعة مستمرة.</p><div class="stars">★★★★★</div><div class="person">عميل تعاقدي</div><div class="role">تقييم تجريبي</div></div>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="container">
-    <div class="section-head">
-      <small>GET IN TOUCH</small>
-      <h2>تواصل معنا</h2>
-      <p>اترك بياناتك وسيتم التواصل معك لتحديد نوع الخدمة والموعد المناسب.</p>
-    </div>
-
-    <div class="contact-wrap">
-      <form class="card" id="contactForm">
-        <div><label>الاسم الكامل<input placeholder="اكتب الاسم"></label></div>
-        <div><label>رقم الهاتف<input placeholder="01xxxxxxxxx"></label></div>
-        <div><label>نوع الخدمة<select><option>اختر الخدمة</option><option>مكافحة حشرات</option><option>مكافحة قوارض</option><option>عقد شركة</option><option>تطهير وتعقيم</option></select></label></div>
-        <div><label>نوع المكان<select><option>منزل</option><option>شركة</option><option>مطعم</option><option>مصنع</option><option>عيادة</option></select></label></div>
-        <div class="full"><label>تفاصيل الطلب<textarea placeholder="اكتب تفاصيل المشكلة أو الخدمة المطلوبة"></textarea></label></div>
-        <div class="full"><button class="btn primary" style="border:0;cursor:pointer">إرسال الطلب</button></div>
-      </form>
-
-      <div class="contact-boxes">
-        <div class="contact-box"><b>📞 الهاتف</b><span>يتم وضع رقم الشركة هنا</span></div>
-        <div class="contact-box"><b>💬 واتساب</b><span>يتم ربطه مباشرة بواتساب الشركة</span></div>
-        <div class="contact-box"><b>📍 مناطق الخدمة</b><span>يتم تحديد مناطق التغطية هنا</span></div>
-        <div class="map"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <div class="footer-grid">
       <div>
-        <div class="brand" style="margin-bottom:12px">
-          <img class="logo-img" src="topservice-logo.png" alt="Top Service Logo">
-          <div><b style="color:#fff">TOP SERVICE</b><small style="color:#b8d1ca">مكافحة آفات الصحة العامة والتطهير</small></div>
-        </div>
-        <p>موقع تعريفي احترافي لخدمات المكافحة والتطهير والعقود الدورية بهوية Top Service.</p>
+        خدمة احترافية للمنازل والمنشآت
       </div>
-      <div><h4>روابط سريعة</h4><p><a href="#home">الرئيسية</a><br><a href="#services">خدماتنا</a><br><a href="#contracts">العقود</a><br><a href="#contact">تواصل معنا</a></p></div>
-      <div><h4>جاهز للتطوير</h4><p>يمكن ربط الصفحة لاحقًا بالدومين، واتساب، نموذج طلب حقيقي، خرائط جوجل، وصفحات خدمات منفصلة.</p></div>
-    </div>
-    <div class="copyright">© 2026 TOP SERVICE — نموذج واجهة تجريبي</div>
-  </div>
-</footer>
 
-<script src="script.js"></script>
+      <div class="top-contact-icons">
+        <a href="#contact" aria-label="انتقل إلى رقم الهاتف" title="الهاتف">
+          📞
+        </a>
+
+        <span>|</span>
+
+        <a href="#contact" aria-label="انتقل إلى واتساب" title="واتساب">
+          💬
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- القائمة الرئيسية -->
+  <nav>
+    <div class="container navwrap">
+
+      <div class="brand">
+        <img
+          class="logo-img"
+          src="topservice-logo.png"
+          alt="Top Service Logo"
+        >
+
+        <div>
+          <b>TOP SERVICE</b>
+          <small>مكافحة آفات الصحة العامة والتطهير</small>
+        </div>
+      </div>
+
+      <div class="menu">
+        <a href="#home">الرئيسية</a>
+        <a href="#services">خدماتنا</a>
+        <a href="#contracts">العقود</a>
+        <a href="#why">لماذا نحن</a>
+        <a href="#contact">تواصل معنا</a>
+      </div>
+
+      <a class="navcta" href="#contact">
+        اطلب معاينة
+      </a>
+
+    </div>
+  </nav>
+
+
+  <!-- الصفحة الرئيسية -->
+  <header class="hero" id="home">
+
+    <div class="container hero-grid">
+
+      <div>
+
+        <span class="badge">
+          ✓ خدمة منظمة • متابعة • حلول مخصصة
+        </span>
+
+        <h1>
+          حلول احترافية لمكافحة
+          <span>الآفات والتطهير</span>
+        </h1>
+
+        <p>
+          نحمي المنازل والشركات والمنشآت بخطط مكافحة مدروسة،
+          متابعة منتظمة، ومعالجات مخصصة حسب نوع الإصابة
+          وطبيعة المكان.
+        </p>
+
+        <div class="actions">
+
+          <a class="btn primary" href="#contact">
+            📅 اطلب زيارة الآن
+          </a>
+
+          <a
+            class="btn gold"
+            href="https://wa.me/201069577759"
+            target="_blank"
+            rel="noopener"
+          >
+            💬 تواصل واتساب
+          </a>
+
+          <a class="btn ghost" href="#services">
+            استعرض الخدمات
+          </a>
+
+        </div>
+      </div>
+
+
+      <div class="visual">
+
+        <div class="gridpattern"></div>
+
+        <div class="technician">
+          🧑‍🔧
+        </div>
+
+        <div class="visual-copy">
+
+          <h3>
+            بيئة أكثر أمانًا
+          </h3>
+
+          <p>
+            نظام خدمة واضح يبدأ بالمعاينة، ثم المعالجة،
+            ثم المتابعة لضمان أفضل نتيجة ممكنة.
+          </p>
+
+          <div class="stats">
+
+            <div class="stat">
+              <b>01</b>
+              <span>معاينة</span>
+            </div>
+
+            <div class="stat">
+              <b>02</b>
+              <span>معالجة</span>
+            </div>
+
+            <div class="stat">
+              <b>03</b>
+              <span>متابعة</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- الخدمات -->
+  <section id="services">
+
+    <div class="container">
+
+      <div class="section-head">
+
+        <small>
+          OUR SERVICES
+        </small>
+
+        <h2>
+          خدماتنا
+        </h2>
+
+        <p>
+          خدمات مكافحة متكاملة للمنازل، المطاعم،
+          الشركات، العيادات، المصانع والمنشآت المختلفة.
+        </p>
+
+      </div>
+
+
+      <div class="services">
+
+        <div class="card">
+
+          <div class="service-icon">
+            🪳
+          </div>
+
+          <h3>
+            مكافحة الصراصير
+          </h3>
+
+          <p>
+            خطط معالجة مخصصة للصراصير الألماني
+            والأمريكي مع التركيز على أماكن الاختباء
+            ومصادر الإصابة.
+          </p>
+
+          <div class="more">
+            اعرف المزيد ←
+          </div>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="service-icon">
+            🛏️
+          </div>
+
+          <h3>
+            مكافحة بق الفراش
+          </h3>
+
+          <p>
+            برنامج دقيق للغرف والمفروشات ومناطق
+            الانتشار مع متابعة بعد التنفيذ عند الحاجة.
+          </p>
+
+          <div class="more">
+            اعرف المزيد ←
+          </div>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="service-icon">
+            🐜
+          </div>
+
+          <h3>
+            مكافحة النمل
+          </h3>
+
+          <p>
+            تحديد مسارات ومصادر الأعشاش ثم تنفيذ
+            المعالجة بالطريقة الأنسب لطبيعة المكان.
+          </p>
+
+          <div class="more">
+            اعرف المزيد ←
+          </div>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="service-icon">
+            🐀
+          </div>
+
+          <h3>
+            مكافحة القوارض
+          </h3>
+
+          <p>
+            مراقبة ومكافحة الفئران والجرذان مع
+            تحديد نقاط الدخول ووضع خطة وقاية مستمرة.
+          </p>
+
+          <div class="more">
+            اعرف المزيد ←
+          </div>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="service-icon">
+            🦟
+          </div>
+
+          <h3>
+            الذباب والبعوض
+          </h3>
+
+          <p>
+            حلول للمناطق الداخلية والخارجية تشمل
+            المعالجة وتقليل عوامل الجذب والتكاثر.
+          </p>
+
+          <div class="more">
+            اعرف المزيد ←
+          </div>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="service-icon">
+            🧼
+          </div>
+
+          <h3>
+            التطهير والتعقيم
+          </h3>
+
+          <p>
+            خدمة منظمة للمواقع التي تحتاج إلى مستوى
+            إضافي من النظافة والتعقيم وفق طبيعة الاستخدام.
+          </p>
+
+          <div class="more">
+            اعرف المزيد ←
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- لماذا نحن -->
+  <section class="why" id="why">
+
+    <div class="container">
+
+      <div class="section-head">
+
+        <small>
+          WHY TOP SERVICE
+        </small>
+
+        <h2>
+          لماذا تختار توب سيرفيس؟
+        </h2>
+
+        <p>
+          لأن الخدمة الجيدة ليست زيارة واحدة فقط،
+          بل نظام متكامل من المعاينة وحتى المتابعة.
+        </p>
+
+      </div>
+
+
+      <div class="points">
+
+        <div class="point">
+          <div class="i">👨‍🔧</div>
+          <b>فنيون مدربون</b>
+          <span>
+            تنفيذ احترافي وخطوات واضحة داخل الموقع.
+          </span>
+        </div>
+
+
+        <div class="point">
+          <div class="i">🧪</div>
+          <b>حلول مناسبة</b>
+          <span>
+            اختيار طريقة المعالجة حسب نوع الآفة
+            وطبيعة المنشأة.
+          </span>
+        </div>
+
+
+        <div class="point">
+          <div class="i">📋</div>
+          <b>تقارير ومتابعة</b>
+          <span>
+            تنظيم الزيارات ومتابعة النتائج
+            للمواقع التعاقدية.
+          </span>
+        </div>
+
+
+        <div class="point">
+          <div class="i">⚡</div>
+          <b>استجابة سريعة</b>
+          <span>
+            تواصل مباشر وتنسيق الزيارة
+            بأقرب موعد متاح.
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- عقود الشركات -->
+  <section id="contracts">
+
+    <div class="container">
+
+      <div class="contracts">
+
+        <div class="contract-banner">
+
+          <span
+            class="badge"
+            style="
+              background:#ffffff15;
+              color:#fff;
+              border-color:#ffffff25;
+            "
+          >
+            B2B SOLUTIONS
+          </span>
+
+          <h3>
+            عقود شهرية وسنوية للشركات والمنشآت
+          </h3>
+
+          <p>
+            برامج دورية مصممة حسب طبيعة الموقع،
+            مستوى الخطورة، ونظام التشغيل.
+            مناسبة للمطاعم، الشركات، المصانع،
+            العيادات، المدارس والمجمعات السكنية.
+          </p>
+
+          <div class="actions">
+
+            <a
+              class="btn gold"
+              href="#contact"
+            >
+              اطلب عرض سعر للشركات
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="sectors">
+
+          <div class="sector">
+            <span>🍽️</span>
+            مطاعم وكافيهات
+          </div>
+
+          <div class="sector">
+            <span>🏢</span>
+            شركات ومكاتب
+          </div>
+
+          <div class="sector">
+            <span>🏭</span>
+            مصانع ومخازن
+          </div>
+
+          <div class="sector">
+            <span>🏥</span>
+            عيادات ومراكز
+          </div>
+
+          <div class="sector">
+            <span>🏫</span>
+            مدارس وحضانات
+          </div>
+
+          <div class="sector">
+            <span>🏘️</span>
+            كمبوندات ومنشآت
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- خطوات العمل -->
+  <section>
+
+    <div class="container">
+
+      <div class="section-head">
+
+        <small>
+          HOW IT WORKS
+        </small>
+
+        <h2>
+          كيف نعمل؟
+        </h2>
+
+        <p>
+          ثلاث خطوات واضحة من أول التواصل
+          وحتى المتابعة بعد التنفيذ.
+        </p>
+
+      </div>
+
+
+      <div class="steps">
+
+        <div class="card step">
+
+          <div class="num">
+            1
+          </div>
+
+          <h3>
+            معاينة وتقييم
+          </h3>
+
+          <p>
+            تحديد نوع الآفة، درجة الإصابة،
+            أماكن النشاط والعوامل المساعدة
+            على انتشارها.
+          </p>
+
+        </div>
+
+
+        <div class="card step">
+
+          <div class="num">
+            2
+          </div>
+
+          <h3>
+            تنفيذ المعالجة
+          </h3>
+
+          <p>
+            اختيار أسلوب التنفيذ المناسب للمكان
+            مع تقليل التعطيل قدر الإمكان.
+          </p>
+
+        </div>
+
+
+        <div class="card step">
+
+          <div class="num">
+            3
+          </div>
+
+          <h3>
+            المتابعة
+          </h3>
+
+          <p>
+            قياس النتيجة وإعادة التقييم عند الحاجة
+            خاصة في العقود والمواقع الحساسة.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- آراء العملاء -->
+  <section style="background:#eef4f1">
+
+    <div class="container">
+
+      <div class="section-head">
+
+        <small>
+          TESTIMONIALS
+        </small>
+
+        <h2>
+          آراء العملاء
+        </h2>
+
+        <p>
+          مكان مخصص لإضافة تقييمات العملاء الحقيقية.
+        </p>
+
+      </div>
+
+
+      <div class="testimonials">
+
+        <div class="card">
+
+          <div class="quote">
+            “
+          </div>
+
+          <p>
+            خدمة منظمة والتزام في المواعيد،
+            والمتابعة بعد التنفيذ كانت ممتازة.
+          </p>
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <div class="person">
+            عميل شركة
+          </div>
+
+          <div class="role">
+            تقييم تجريبي
+          </div>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="quote">
+            “
+          </div>
+
+          <p>
+            التعامل واضح من المعاينة
+            وحتى تنفيذ البرنامج داخل الموقع.
+          </p>
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <div class="person">
+            عميل منشأة
+          </div>
+
+          <div class="role">
+            تقييم تجريبي
+          </div>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="quote">
+            “
+          </div>
+
+          <p>
+            فريق محترف والخدمة مناسبة جدًا
+            للمواقع التي تحتاج متابعة مستمرة.
+          </p>
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <div class="person">
+            عميل تعاقدي
+          </div>
+
+          <div class="role">
+            تقييم تجريبي
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- التواصل -->
+  <section id="contact">
+
+    <div class="container">
+
+      <div class="section-head">
+
+        <small>
+          GET IN TOUCH
+        </small>
+
+        <h2>
+          تواصل معنا
+        </h2>
+
+        <p>
+          اتصل بنا أو تواصل عبر واتساب
+          لتحديد نوع الخدمة والموعد المناسب.
+        </p>
+
+      </div>
+
+
+      <div class="contact-wrap">
+
+        <form
+          class="card"
+          id="contactForm"
+        >
+
+          <div>
+            <label>
+              الاسم الكامل
+
+              <input
+                placeholder="اكتب الاسم"
+              >
+            </label>
+          </div>
+
+
+          <div>
+            <label>
+              رقم الهاتف
+
+              <input
+                placeholder="01xxxxxxxxx"
+              >
+            </label>
+          </div>
+
+
+          <div>
+            <label>
+              نوع الخدمة
+
+              <select>
+
+                <option>
+                  اختر الخدمة
+                </option>
+
+                <option>
+                  مكافحة حشرات
+                </option>
+
+                <option>
+                  مكافحة قوارض
+                </option>
+
+                <option>
+                  عقد شركة
+                </option>
+
+                <option>
+                  تطهير وتعقيم
+                </option>
+
+              </select>
+
+            </label>
+          </div>
+
+
+          <div>
+            <label>
+              نوع المكان
+
+              <select>
+
+                <option>
+                  منزل
+                </option>
+
+                <option>
+                  شركة
+                </option>
+
+                <option>
+                  مطعم
+                </option>
+
+                <option>
+                  مصنع
+                </option>
+
+                <option>
+                  عيادة
+                </option>
+
+              </select>
+
+            </label>
+          </div>
+
+
+          <div class="full">
+
+            <label>
+              تفاصيل الطلب
+
+              <textarea
+                placeholder="اكتب تفاصيل المشكلة أو الخدمة المطلوبة"
+              ></textarea>
+
+            </label>
+
+          </div>
+
+
+          <div class="full">
+
+            <button
+              class="btn primary"
+              style="border:0;cursor:pointer"
+            >
+              إرسال الطلب
+            </button>
+
+          </div>
+
+        </form>
+
+
+        <div class="contact-boxes">
+
+          <!-- رقم الاتصال -->
+          <div class="contact-box">
+
+            <b>
+              📞 الهاتف
+            </b>
+
+            <span>
+
+              <a href="tel:+201094498984">
+                01094498984
+              </a>
+
+            </span>
+
+          </div>
+
+
+          <!-- واتساب -->
+          <div class="contact-box">
+
+            <b>
+              💬 واتساب
+            </b>
+
+            <span>
+
+              <a
+                href="https://wa.me/201069577759"
+                target="_blank"
+                rel="noopener"
+              >
+                01069577759
+              </a>
+
+            </span>
+
+          </div>
+
+
+          <!-- مناطق الخدمة -->
+          <div class="contact-box">
+
+            <b>
+              📍 مناطق الخدمة
+            </b>
+
+            <span>
+              تواصل معنا لمعرفة مدى توفر الخدمة في منطقتك
+            </span>
+
+          </div>
+
+
+          <div class="map"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- الفوتر -->
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <div
+            class="brand"
+            style="margin-bottom:12px"
+          >
+
+            <img
+              class="logo-img"
+              src="topservice-logo.png"
+              alt="Top Service Logo"
+            >
+
+            <div>
+
+              <b style="color:#fff">
+                TOP SERVICE
+              </b>
+
+              <small style="color:#b8d1ca">
+                مكافحة آفات الصحة العامة والتطهير
+              </small>
+
+            </div>
+
+          </div>
+
+          <p>
+            خدمات احترافية لمكافحة الآفات والتطهير
+            والعقود الدورية للمنازل والمنشآت.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h4>
+            روابط سريعة
+          </h4>
+
+          <p>
+
+            <a href="#home">
+              الرئيسية
+            </a>
+
+            <br>
+
+            <a href="#services">
+              خدماتنا
+            </a>
+
+            <br>
+
+            <a href="#contracts">
+              العقود
+            </a>
+
+            <br>
+
+            <a href="#contact">
+              تواصل معنا
+            </a>
+
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h4>
+            تواصل معنا
+          </h4>
+
+          <p>
+
+            <a href="tel:+201094498984">
+              📞 01094498984
+            </a>
+
+            <br>
+
+            <a
+              href="https://wa.me/201069577759"
+              target="_blank"
+              rel="noopener"
+            >
+              💬 01069577759
+            </a>
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="copyright">
+
+        © 2026 TOP SERVICE — جميع الحقوق محفوظة
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+
+  <!-- زر واتساب العائم -->
+  <a
+    href="https://wa.me/201069577759"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener"
+    aria-label="تواصل معنا عبر واتساب"
+  >
+
+    <svg
+      viewBox="0 0 32 32"
+      aria-hidden="true"
+    >
+
+      <path d="M16 3C8.83 3 3 8.63 3 15.57c0 2.45.73 4.84 2.12 6.88L3 29l6.83-2.07A13.2 13.2 0 0 0 16 28.43c7.17 0 13-5.63 13-12.86S23.17 3 16 3zm0 23.1c-2.04 0-4.04-.54-5.78-1.57l-.41-.24-4.05 1.23 1.26-3.85-.27-.4a10.27 10.27 0 0 1-1.66-5.7C5.09 9.9 9.98 5.3 16 5.3s10.91 4.6 10.91 10.27S22.02 26.1 16 26.1zm6-7.7c-.33-.16-1.96-.96-2.27-1.07-.3-.11-.52-.16-.74.16-.22.33-.85 1.07-1.04 1.29-.19.22-.38.24-.71.08-.33-.16-1.39-.5-2.65-1.59-.98-.85-1.64-1.9-1.83-2.23-.19-.33-.02-.5.14-.66.15-.14.33-.38.49-.57.16-.19.22-.33.33-.55.11-.22.05-.41-.03-.57-.08-.16-.74-1.77-1.01-2.42-.27-.63-.54-.54-.74-.55h-.63c-.22 0-.57.08-.87.41-.3.33-1.15 1.12-1.15 2.72s1.18 3.15 1.34 3.37c.16.22 2.31 3.63 5.72 4.95.8.3 1.43.48 1.92.62.81.25 1.54.22 2.12.13.65-.1 1.96-.8 2.24-1.57.27-.77.27-1.43.19-1.57-.08-.14-.3-.22-.63-.38z"/>
+
+    </svg>
+
+    <span>
+      تواصل معنا
+    </span>
+
+  </a>
+
 </body>
 </html>
